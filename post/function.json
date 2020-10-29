@@ -1,0 +1,26 @@
+{
+    "bindings": [
+        {
+            "authLevel": "anonymous",
+            "type": "httpTrigger",
+            "direction": "in",
+            "name": "req",
+            "methods": [
+                "post"
+            ]
+        },
+        {
+            "type": "http",
+            "direction": "out",
+            "name": "res"
+        },
+        {
+            "name": "outputDocument",
+            "direction": "out",
+            "type": "cosmosDB",
+            "databaseName": "handson",
+            "collectionName": "messages",
+            "connectionStringSetting": "seccamp2020b3_DOCUMENTDB"
+        }
+    ]
+}
