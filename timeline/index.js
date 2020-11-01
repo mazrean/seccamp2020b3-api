@@ -28,7 +28,7 @@ module.exports = async function (context, req) {
     
     context.log(`Cosmos DB result: ${JSON.stringify(result)}`);
 
-    const msgs = result.resources.map(e => ({user_id: e.user_id, timestamp: e.timestamp, text: e.text}));
+    const msgs = result.resources.map(e => ({user_id: e.user_id, timestamp: e.timestamp, text: e.text, dest: e.dest}));
 
     context.res = {
         status: 200,
